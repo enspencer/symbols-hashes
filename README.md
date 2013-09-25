@@ -154,7 +154,7 @@ my_wizard["name"]
 >> 'Gandalf the Grey'
 ```
 
-Hashes are an incredibly usefuly data structure that you will use all the time as a ruby developer. Keep in mind, however that that are in no way inherently better than arrays, the two are simply different. You will find yourself using both, and should consider the pros and cons of each when deciding which you should use (if either) to store your data.
+Hashes are an incredibly usefuly data structure that you will use all the time as a ruby developer. Keep in mind however, that that are in no way inherently better than arrays; the two are simply different. You will find yourself using both, and should consider the pros of cons of each before you decide which (if either) will best fit your dat.
 
 #Symbols
 
