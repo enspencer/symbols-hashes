@@ -156,13 +156,27 @@ my_wizard = {
 So what is the difference between strings and symbols? The difference is that while in ruby, strings are mutable (they can be changed after assignment), symbols are not (they are immutable). Lets see an example to understand the implications of this difference.
 
 ```ruby
-   my_string = "I'm Sorry"
-   my_string += " Dave, I'm afraid I can't do that"
-   puts my_string #this will output: "I'm Sorry Dave, I'm afraid I can't do that"
-   
-   :my_symbol = :"I'm Sorry"
-   :my_string += :" Dave, I'm afraid I can't do that"
-   # this will result in the error:
-   # NoMethodError: undefined method `+' for :"I'm Sorry":Symbol
+my_string = "I'm Sorry"
+my_string += " Dave, I'm afraid I can't do that"
+puts my_string #this will output: "I'm Sorry Dave, I'm afraid I can't do that"
+
+:my_symbol = :"I'm Sorry"
+:my_string += :" Dave, I'm afraid I can't do that"
+# this will result in the error:
+# NoMethodError: undefined method `+' for :"I'm Sorry":Symbol
 ```
 
+We can also convert between symbols and strings like so:
+
+```ruby
+:hello.to_s
+>> "hello"
+
+"hello".intern
+>> :hello
+
+"hello".to_sym
+>> :hello
+```
+
+It's worth noting that the intern and to_sym functions are exactly the same. to_sym is simply an alias for intern.
