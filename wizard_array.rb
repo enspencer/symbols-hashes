@@ -29,5 +29,6 @@ my_wizard = ['Gandalf the Grey', 10000, 'Middle Earth', 'You Shall Not Pass', tr
 # 	my_wizard[4] is whether or not our wizard is epic, and
 # 	my_wizard[5] is weaknesses
 
-# 	But we begin to see some shortcomings. 
+# 	But we begin to see some shortcomings (at least with our wizard example). 
 
+# 	1. There is no evident association between the index of the array and the information it contains
