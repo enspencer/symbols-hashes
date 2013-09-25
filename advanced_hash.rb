@@ -33,3 +33,7 @@ student = {
 		members: ['Mike', 'Sarah', 'Siobhan']
 	}
 }
+
+#how would we get the student's third grade?
+
+#how would we get the second member of this person's family?

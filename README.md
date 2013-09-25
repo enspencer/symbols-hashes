@@ -171,7 +171,7 @@ and again when we saw hash rocket notation:
 ```
 Thats because :name is actually a symbol! So what does a symbol actually look like? It's simply a ':' followed by alphanumeric characters or a string
 
-```ruby
+```ruby 
 "key" #this is a string
 :key #this is a symbol
 :key42 #this is a symbol

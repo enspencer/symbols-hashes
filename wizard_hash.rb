@@ -38,5 +38,5 @@ binding.pry
 
 
 
-
+ 
 # call your print quote function here

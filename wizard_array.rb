@@ -34,5 +34,5 @@ my_wizard = ['Gandalf the Grey', 10000, 'Middle Earth', 'You Shall Not Pass', tr
 
 
 
-
+ 
 # call your print quote function here and run this file to see the result
