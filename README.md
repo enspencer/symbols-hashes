@@ -32,18 +32,14 @@ my_wizard = ['Gandalf the Grey', 10000, 'Middle Earth', 'You Shall Not Pass', tr
 
 
 Now this is all ok, if you remembered or noted somewhere that:
-
->    my_wizard[0] is name,
-
->    my_wizard[1] is age,
-
->    my_wizard[2] is location,
-
->    my_wizard[3] is famous quote,
-
->    my_wizard[4] is whether or not our wizard is epic, and
-
->    my_wizard[5] is weaknesses
+<ol>
+<li>my_wizard[0] is name,</li>
+<li>my_wizard[1] is age,</li>
+<li>my_wizard[2] is location,</li>
+<li>my_wizard[3] is famous quote,</li>
+<li>my_wizard[4] is whether or not our wizard is epic, and</li>
+<li>my_wizard[5] is weaknesses</li>
+</ol>
 
 ##But...
 ### we begin to see some shortcomings (at least with our wizard example). 
