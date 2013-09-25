@@ -47,14 +47,15 @@ my_wizard[5] #is weaknesses
 1. There is no evident association between the index of the array and the information it contains
 2. As a product of the first shortcoming, it is very difficult and time-inneficient to fetch or update information if we don't already know where it is.
 	for example, looking up "Gandalf the Grey" by famous quotes might consist of something like:
-	```ruby
-		# assume all_wizards is a collection of wizards like the one we defined above
-		all_wizards.each do |wizard|	#iterates over each of our wizards
-			wizard.each do |information| #iterates over single wizard info
-				if information == 'You Shall Not Pass'
-					return wizard
-				end
+	
+```ruby
+	# assume all_wizards is a collection of wizards like the one we defined above
+	all_wizards.each do |wizard|	#iterates over each of our wizards
+		wizard.each do |information| #iterates over single wizard info
+			if information == 'You Shall Not Pass'
+				return wizard
 			end
 		end
-	```
+	end
+```
 3. 
