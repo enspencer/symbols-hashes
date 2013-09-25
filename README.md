@@ -106,7 +106,6 @@ then we give it a set of curly braces, inside of which we will eventally define 
 
 ```ruby
 my_wizard = {}
-
 ```
 note: you can always define an empty hash and give it key value pairs later
     
@@ -126,9 +125,9 @@ quote: 'You shall not pass'
 
 you will also see the "hash rocket" syntax floating around
 
-`ruby
+```ruby
 :name => 'Gandalf the Grey
-`
+```
 
 I personally do not use this sytax, because I feel that the colon sytax is cleaner and more readable, but many developers
 do use hash rocket syntax. You will probably see this most often with older ruby code, and you should be able to recognize and use it. As a side note, this sytax actually clearly highlights the fact that our key is in fact a symbol… but more on that later.
@@ -154,6 +153,8 @@ And now we could accss the values like so:
 my_wizard["name"]
 >> 'Gandalf the Grey'
 ```
+
+Hashes are an incredibly usefuly data structure that you will use all the time as a ruby developer. Keep in mind, however that that are in no way inherently better than arrays, the two are simply different. You will find yourself using both, and should consider the pros and cons of each when deciding which you should use (if either) to store your data.
 
 #Symbols
 
