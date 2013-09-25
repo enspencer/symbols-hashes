@@ -168,18 +168,17 @@ and again when we saw hash rocket notation:
 ```ruby
 :name => 'my_wizard'
 ```
-So what does a symbol actually look like? It's basically a ':' followed by alphanumerica characters
+Thats because :name is actually a symbol! So what does a symbol actually look like? It's simply a ':' followed by alphanumeric characters
 
 ```ruby
 "key" #this is a string
 :key #this is a symbol
 :key42 #this is a symbol
 :"key" #this is a symbol
-# note that we cannot make symbols using strictly numbers ( ex :42 )
+# note that we cannot make symbols using strictly numbers ( ex :42 is not a valid symbol )
 ```
 
-
-So what is the difference between strings and symbols? The difference is that while in ruby, strings are mutable (they can be changed after assignment), symbols are not (they are immutable). Lets see an example to understand the implications of this difference.
+So what is the difference so what is a symbol and how does it differ from a string? The difference is that while in ruby, strings are mutable (they can be changed after assignment), symbols are not (they are immutable). Lets see an example to understand the implications of this difference.
 
 ```ruby
 my_string = "I'm Sorry"
@@ -188,10 +187,10 @@ puts my_string
 >> "I'm Sorry Dave, I'm afraid I can't do that"
 
 :my_symbol = :"I'm Sorry"
-:my_string += :" Dave, I'm afraid I can't do that"
+:my_symbol += :" Dave, I'm afraid I can't do that"
 >> NoMethodError: undefined method `+' for :"I'm Sorry":Symbol
 ```
-As we can see, while we can concatinate two string together to form one string, the same does not hold true for symbols.
+As we can see, while we can concatinate two string together to form one string, the same does not hold true for symbols due to the symbols immutability.
 
 We can also convert between symbols and strings like so:
 
