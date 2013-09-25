@@ -126,7 +126,7 @@ quote: 'You shall not pass'
 you will also see the "hash rocket" syntax floating around
 
 ```ruby
-:name => 'Gandalf the Grey
+:name => 'Gandalf the Grey'
 ```
 
 I personally do not use this sytax, because I feel that the colon sytax is cleaner and more readable, but many developers
@@ -154,7 +154,7 @@ my_wizard["name"]
 >> 'Gandalf the Grey'
 ```
 
-Hashes are an incredibly usefuly data structure that you will use all the time as a ruby developer. Keep in mind however, that that are in no way inherently better than arrays; the two are simply different. You will find yourself using both, and should consider the pros of cons of each before you decide which (if either) will best fit your dat.
+Hashes are an incredibly usefuly data structure that you will use all the time as a ruby developer. Keep in mind however, that that are in no way inherently better than arrays; the two are simply different. You will find yourself using both, and should consider the pros of cons of each before you decide which (if either) will best fit your data.
 
 #Symbols
 
@@ -169,7 +169,7 @@ and again when we saw hash rocket notation:
 ```ruby
 :name => 'my_wizard'
 ```
-Thats because :name is actually a symbol! So what does a symbol actually look like? It's simply a ':' followed by alphanumeric characters
+Thats because :name is actually a symbol! So what does a symbol actually look like? It's simply a ':' followed by alphanumeric characters or a string
 
 ```ruby
 "key" #this is a string
