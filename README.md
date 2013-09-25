@@ -1,5 +1,7 @@
 #Hashes, Symbols
 
+### Lets start back with arrays
+
 As we have seen, arrays can be defined to contain
 	many items of the same type
 
@@ -8,14 +10,14 @@ my_array = ['zero','one','two','three','four']
 ```
 
 
-We can access one of these items by its index in the arrays
+We can access one of these items by its index in the array
 
 ```ruby 
 puts my_array[2] #outpus 'two' 
 ```
 
 
-We can also use the index to SET a value in the arrays
+We can also use the index to SET a value in the array
 
 ```ruby 
 my_array[2] = 'TWO'
@@ -24,7 +26,7 @@ puts my_array[2] #outpus 'TWO'
 
 
 We can even have arrays containing many different
-  data types. Here well create a 'wizard' object
+  data types. Here well create the concept of a wizard
 
 ```ruby
 my_wizard = ['Gandalf the Grey', 10000, 'Middle Earth', 'You Shall Not Pass', true, 'Balrogs', 'Total Badass']
@@ -78,7 +80,7 @@ my_wizard = {
 }
 ```
 
-Already we see a much more organized data structure. Each piece of information is denoted by a key to the left of it, so at least looking at this syntax, we know exactly what each value represents. Furthermore we can now use the key value on the left to access the information items. So, if I wanted to see my_wizard's name, I could access it like so:
+Already we see a data structure much more suited to our goal of storing a wizard. Each piece of information is denoted by a key to the left of it, so looking at this syntax, we know exactly what each value represents. Furthermore we can now use the key value on the left to access the information items. So, if I wanted to see my_wizard's name, I could access it like so:
 
 
 ```ruby
@@ -90,9 +92,7 @@ Already we see a much more organized data structure. Each piece of information i
 
 So like arrays, we can think of hashes as containers for storing information. However hashes, unlike arrays, allow us to attach specific identifying keys to more easily access and update our information
 
-## Hash Syntax and Symbols
-
-###Syntax
+# Hash Syntax
 
 Lets walk through how we defined the hash above:
 
@@ -155,7 +155,7 @@ my_wizard["name"]
 >> 'Gandalf the Grey'
 ```
 
-###Symbols
+#Symbols
 
 
 You may have noticed the ':' before the key when we accessed information from the Hash:
