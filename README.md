@@ -27,7 +27,7 @@ We can even have arrays containing many different
   data types. Here well create a 'wizard' object
 
 ```ruby
-my_wizard = ['Gandalf the Grey', 10000, 'Middle Earth', 'You Shall Not Pass', true, 'Balrogs']
+my_wizard = ['Gandalf the Grey', 10000, 'Middle Earth', 'You Shall Not Pass', true, 'Balrogs', 'Total Badass']
 ```
 
 
@@ -39,6 +39,7 @@ my_wizard[2] #is location,
 my_wizard[3] #is famous quote,
 my_wizard[4] #is whether or not our wizard is epic, and
 my_wizard[5] #is weaknesses
+my_wizard[6] #is status
 ```
 
 ##But...
@@ -73,10 +74,11 @@ my_wizard = {
     quote: 'You Shal Not Pass',
     epic: true,
     weaknesses: 'Balrogs',
+    status: 'Total Badass'
 }
 ```
 
-Already we see a much more organized data structure. Each piece of information is denoted by a key, and we can now access the information by the key. So, if I wanted to see my_wizard's name, I could access it using: 
+Already we see a much more organized data structure. Each piece of information is denoted by a key, and we can now access the information by the key. So, if I wanted to see my_wizard's name, I could access it like so: 
 
 ```ruby
     #we could write
@@ -86,11 +88,13 @@ Already we see a much more organized data structure. Each piece of information i
     my_wizard[:name] = 'Ratagast the Brown' # this would reset the name of the wizard
 ```
 
-So hashes are essentially containers that allow us to attach identifying keys for easy retrieval and setting of values.
+So like arrays, we can think of hashes as containers for storing information. However, hashes unlike arrays allow us to attach  specific identifying keys for easy access to values.
 
-##Hash Syntax (Symbols)
+## Hash Syntax and Symbols
 
-We define a hash just as is shown above:
+###Syntax
+
+Lets walk through how we defined the  hash above:
 
 we start with the variable name
 
@@ -98,19 +102,20 @@ we start with the variable name
 my_wizard
 `
 
-then we give it a set of curly braces, inside of which we will define our key value pairs
+then we give it a set of curly braces, inside of which we will eventally define our key value pairs
 
 `ruby
 my_wizard = {}
 `
-
-defining a key value pair, we place the key on the left, a colon, and then the value on the right.
+    *note: you can always define an empty hash and give it key value pairs later
+    
+to define a key value pair, we place the key on the left, a colon, and then the value we want associated with our key on the right.
 
 `ruby
 name : 'Gandalf the Grey'
 `
 
-if we have multiple key value pairs, we use the same syntax with commas at the end of each key value pair (except for the last)
+if we have multiple key value pairs, we use the same syntax and add commas at the end of each key value pair (except for the last one)
 
 `ruby
 name: 'Gandalf the Grey",
@@ -125,7 +130,7 @@ you will also see the "hash rocket" syntax floating around
 `
 
 I personally do not use this sytax, because I feel like the colon sytax is cleaner and more readable, but many developers
-do use this and you should be able to recognize and use it. This sytax actually highlights the fact that our key is a SYMBOL.
+do use. You will probably see this most often with older ruby code, and you should be able to recognize and use it. As a side not, this sytax actually clearly highlights the fact that our key is in fact a symbol… 
 
 ###Symbols
 
@@ -139,6 +144,25 @@ my_wizard = {
     "quote": 'You Shal Not Pass',
     "epic": true,
     "weaknesses": 'Balrogs',
+    "status": 'Total Badass'
 }
-
 ```
+'ruby
+:key #this is a symbol
+"key" #this is a string
+:"key" #this is a symbol
+'
+
+So what is the difference between strings and symbols? The difference is that while in ruby, strings are mutable (they can be changed after assignment), symbols are not (they are immutable). Lets see an example to understand the implications of this difference.
+
+```ruby
+   my_string = "I'm Sorry"
+   my_string += " Dave, I'm afraid I can't do that"
+   puts my_string #this will output: "I'm Sorry Dave, I'm afraid I can't do that"
+   
+   :my_symbol = :"I'm Sorry"
+   :my_string += :" Dave, I'm afraid I can't do that"
+   # this will result in the error:
+   # NoMethodError: undefined method `+' for :"I'm Sorry":Symbol
+```
+
