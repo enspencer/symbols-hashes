@@ -181,3 +181,8 @@ We can also convert between symbols and strings like so:
 ```
 
 It's worth noting that the intern and to_sym functions are exactly the same. to_sym is simply an alias for intern.
+
+Here are a few links I think may be helpful if you're more interseted in sybmols and the reason there are two names for one function:
+
+Symbols Vs. Strings: [http://goo.gl/hHAFsw](http://goo.gl/hHAFsw)
+.intern vs .to_sym: [http://goo.gl/xgQtp3](http://goo.gl/xgQtp3)
