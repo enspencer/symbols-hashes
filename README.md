@@ -132,21 +132,32 @@ you will also see the "hash rocket" syntax floating around
 I personally do not use this sytax, because I feel like the colon sytax is cleaner and more readable, but many developers
 do use. You will probably see this most often with older ruby code, and you should be able to recognize and use it. As a side not, this sytax actually clearly highlights the fact that our key is in fact a symbol… 
 
-###Symbols
-
-You may have noticed the ':' before the key when we accessed information from the Hash ( :name ), and again when we saw hash rocket notation. We could also define our hash using strings as our keys:
+We could also define our hash using strings as our keys
 
 ```ruby
+#if we're using strings, we must use hash rockets
 my_wizard = {
-    "name": 'Gandalf the Grey',
-    "age": 10000,
-    "location": 'Middle Earth',
-    "quote": 'You Shal Not Pass',
-    "epic": true,
-    "weaknesses": 'Balrogs',
-    "status": 'Total Badass'
+    "name" => 'Gandalf the Grey',
+    "age" => 10000,
+    "location" => 'Middle Earth',
+    "quote" => 'You Shal Not Pass',
+    "epic" => true,
+    "weaknesses" => 'Balrogs',
+    "status" => 'Total Badass'
 }
+
 ```
+And now we could accss the values like so:
+
+`ruby
+my_wizard["name"]
+>> 'Gandalf the Grey'
+`
+
+###Symbols
+
+You may have noticed the ':' before the key when we accessed information from the Hash ( :name ), and again when we saw hash rocket notation. 
+
 'ruby
 :key #this is a symbol
 "key" #this is a string
@@ -184,5 +195,7 @@ It's worth noting that the intern and to_sym functions are exactly the same. to_
 
 Here are a few links I think may be helpful if you're more interseted in sybmols and the reason there are two names for one function:
 
+
 Symbols Vs. Strings: [http://goo.gl/hHAFsw](http://goo.gl/hHAFsw)
+
 .intern vs .to_sym: [http://goo.gl/xgQtp3](http://goo.gl/xgQtp3)
