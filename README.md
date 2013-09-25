@@ -158,13 +158,14 @@ So what is the difference between strings and symbols? The difference is that wh
 ```ruby
 my_string = "I'm Sorry"
 my_string += " Dave, I'm afraid I can't do that"
-puts my_string #this will output: "I'm Sorry Dave, I'm afraid I can't do that"
+puts my_string 
+>> "I'm Sorry Dave, I'm afraid I can't do that"
 
 :my_symbol = :"I'm Sorry"
 :my_string += :" Dave, I'm afraid I can't do that"
-# this will result in the error:
-# NoMethodError: undefined method `+' for :"I'm Sorry":Symbol
+>> NoMethodError: undefined method `+' for :"I'm Sorry":Symbol
 ```
+As we can see, while we can concatinate two string together to form one string, the same does not hold true for symbols.
 
 We can also convert between symbols and strings like so:
 
