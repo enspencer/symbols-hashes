@@ -8,14 +8,14 @@ my_array = ['zero','one','two','three','four']
 ```
 
 
-we can access one of these items by its index in the arrays
+We can access one of these items by its index in the arrays
 
 ```ruby 
 puts my_array[2] #outpus 'two' 
 ```
 
 
-we can also use the index to SET a value in the arrays
+We can also use the index to SET a value in the arrays
 
 ```ruby 
 my_array[2] = 'TWO'
@@ -43,7 +43,7 @@ my_wizard[6] #is status
 ```
 
 ##But...
-### we begin to see some shortcomings (at least with our wizard example). 
+### We begin to see some shortcomings (at least with our wizard example). 
 
 1. There is no evident association between the index of the array and the information it contains.
 2. If we are storing diverse information, there is no key that identifies what each piece of information represents.
@@ -64,7 +64,7 @@ end
 
 #Hashes
 
-A hash is a ruby data structure that allows us to define sets of key-value pairs. The key can then be used to access the value Before any further explaination, take a look at how it's done:
+A hash is a ruby data structure that allows us to define sets of key-value pairs. The key can then be used to access the value. Before any further explaination, take a look at how it's done:
 
 ```ruby
 my_wizard = {
@@ -78,50 +78,50 @@ my_wizard = {
 }
 ```
 
-Already we see a much more organized data structure. Each piece of information is denoted by a key, and we can now access the information by the key. So, if I wanted to see my_wizard's name, I could access it like so: 
+Already we see a much more organized data structure. Each piece of information is denoted by a key to the left of it, so at least looking at this syntax, we know exactly what each value represents. Furthermore we can now use the key value on the left to access the information items. So, if I wanted to see my_wizard's name, I could access it like so:
+
 
 ```ruby
-    #we could write
     my_wizard[:name] #this would return 'Gandalf the Grey'
-    
-    # or
+
+    # we could even reset the name using the key
     my_wizard[:name] = 'Ratagast the Brown' # this would reset the name of the wizard
 ```
 
-So like arrays, we can think of hashes as containers for storing information. However, hashes unlike arrays allow us to attach  specific identifying keys for easy access to values.
+So like arrays, we can think of hashes as containers for storing information. However hashes, unlike arrays, allow us to attach specific identifying keys to more easily access and update our information
 
 ## Hash Syntax and Symbols
 
 ###Syntax
 
-Lets walk through how we defined the  hash above:
+Lets walk through how we defined the hash above:
 
 we start with the variable name
 
-`ruby
+```ruby
 my_wizard
-`
+```
 
 then we give it a set of curly braces, inside of which we will eventally define our key value pairs
 
-`ruby
+```ruby
 my_wizard = {}
-`
+```
     *note: you can always define an empty hash and give it key value pairs later
     
 to define a key value pair, we place the key on the left, a colon, and then the value we want associated with our key on the right.
 
-`ruby
+```ruby
 name : 'Gandalf the Grey'
-`
+````
 
 if we have multiple key value pairs, we use the same syntax and add commas at the end of each key value pair (except for the last one)
 
-`ruby
+```ruby
 name: 'Gandalf the Grey",
 age: 10000,
 quote: 'You shall not pass'
-`
+```
 
 you will also see the "hash rocket" syntax floating around
 
@@ -149,20 +149,20 @@ my_wizard = {
 ```
 And now we could accss the values like so:
 
-`ruby
+```ruby
 my_wizard["name"]
 >> 'Gandalf the Grey'
-`
+```
 
 ###Symbols
 
 You may have noticed the ':' before the key when we accessed information from the Hash ( :name ), and again when we saw hash rocket notation. 
 
-'ruby
+```ruby
 :key #this is a symbol
 "key" #this is a string
 :"key" #this is a symbol
-'
+```
 
 So what is the difference between strings and symbols? The difference is that while in ruby, strings are mutable (they can be changed after assignment), symbols are not (they are immutable). Lets see an example to understand the implications of this difference.
 
