@@ -106,14 +106,15 @@ then we give it a set of curly braces, inside of which we will eventally define 
 
 ```ruby
 my_wizard = {}
+
 ```
-    *note: you can always define an empty hash and give it key value pairs later
+note: you can always define an empty hash and give it key value pairs later
     
 to define a key value pair, we place the key on the left, a colon, and then the value we want associated with our key on the right.
 
 ```ruby
 name : 'Gandalf the Grey'
-````
+```
 
 if we have multiple key value pairs, we use the same syntax and add commas at the end of each key value pair (except for the last one)
 
@@ -129,8 +130,8 @@ you will also see the "hash rocket" syntax floating around
 :name => 'Gandalf the Grey
 `
 
-I personally do not use this sytax, because I feel like the colon sytax is cleaner and more readable, but many developers
-do use. You will probably see this most often with older ruby code, and you should be able to recognize and use it. As a side not, this sytax actually clearly highlights the fact that our key is in fact a symbol… 
+I personally do not use this sytax, because I feel that the colon sytax is cleaner and more readable, but many developers
+do use hash rocket syntax. You will probably see this most often with older ruby code, and you should be able to recognize and use it. As a side note, this sytax actually clearly highlights the fact that our key is in fact a symbol… but more on that later.
 
 We could also define our hash using strings as our keys
 
@@ -156,13 +157,27 @@ my_wizard["name"]
 
 ###Symbols
 
-You may have noticed the ':' before the key when we accessed information from the Hash ( :name ), and again when we saw hash rocket notation. 
+
+You may have noticed the ':' before the key when we accessed information from the Hash:
 
 ```ruby
-:key #this is a symbol
-"key" #this is a string
-:"key" #this is a symbol
+my_wizard[:name]
+``` 
+
+and again when we saw hash rocket notation:
+```ruby
+:name => 'my_wizard'
 ```
+So what does a symbol actually look like? It's basically a ':' followed by alphanumerica characters
+
+```ruby
+"key" #this is a string
+:key #this is a symbol
+:key42 #this is a symbol
+:"key" #this is a symbol
+# note that we cannot make symbols using strictly numbers ( ex :42 )
+```
+
 
 So what is the difference between strings and symbols? The difference is that while in ruby, strings are mutable (they can be changed after assignment), symbols are not (they are immutable). Lets see an example to understand the implications of this difference.
 
